@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on あざやかオレンジ</title>
+    <link>http://vivid.red/tags/hugo/</link>
+    <description>Recent content in Hugo on あざやかオレンジ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Mon, 14 Aug 2017 18:31:38 +0900</lastBuildDate>
+    <atom:link href="/tags/hugo/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugo .Summary 続きを読む</title>
+      <link>http://vivid.red/post/hugo-summary/</link>
+      <pubDate>Mon, 14 Aug 2017 18:31:38 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/hugo-summary/</guid>
+      <description>&lt;p&gt;ブログの記事リストでよくある「続きを読む」、「もっと読む」、「Read more」等に概要が書いてあって「&lt;code&gt;...&lt;/code&gt;」で続きがあるようになっているのを見たことがあります。これをHugoでどうやればよいかを調べました。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugoで404ページかどうかを判定する</title>
+      <link>http://vivid.red/post/hugo-how-to-check-404/</link>
+      <pubDate>Mon, 14 Aug 2017 18:04:22 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/hugo-how-to-check-404/</guid>
+      <description>&lt;p&gt;Google Adsenseでは、404ページに広告を載せてはいけないことになっています。うちのブログでもいずれやろうと思っているので対応しました。やり方を調べるのが大変だったのでここに記すことにしました。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugoのローカルサーバー立ち上げがめんどくさかったのでserver.exeを作った</title>
+      <link>http://vivid.red/post/hugo-start-server/</link>
+      <pubDate>Sun, 06 Aug 2017 03:22:03 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/hugo-start-server/</guid>
+      <description>&lt;p&gt;Hugoのプレビューに使うサーバーを立ち上げるコマンドが長くて面倒だったのでダブルクリックで起動できる実行ファイルにしました。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

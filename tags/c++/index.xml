@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on あざやかオレンジ</title>
+    <link>http://vivid.red/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on あざやかオレンジ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Sun, 06 Aug 2017 03:22:03 +0900</lastBuildDate>
+    <atom:link href="/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugoのローカルサーバー立ち上げがめんどくさかったのでserver.exeを作った</title>
+      <link>http://vivid.red/post/hugo-start-server/</link>
+      <pubDate>Sun, 06 Aug 2017 03:22:03 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/hugo-start-server/</guid>
+      <description>&lt;p&gt;Hugoのプレビューに使うサーバーを立ち上げるコマンドが長くて面倒だったのでダブルクリックで起動できる実行ファイルにしました。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

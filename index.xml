@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>あざやかオレンジ on あざやかオレンジ</title>
+    <link>http://vivid.red/</link>
+    <description>Recent content in あざやかオレンジ on あざやかオレンジ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Mon, 14 Aug 2017 20:00:48 +0900</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>タグとカテゴリーの使い分け？</title>
+      <link>http://vivid.red/post/blog-tag-category/</link>
+      <pubDate>Mon, 14 Aug 2017 20:00:48 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/blog-tag-category/</guid>
+      <description>タグとカテゴリーの使い分けについて悩んでいる。どちらかで良いという声がある。記事の少ない今のうちに決断したいところだ。どうすればいいかな？もし無くすならカテゴリーの方だな。</description>
+    </item>
+    
+    <item>
+      <title>Hugo .Summary 続きを読む</title>
+      <link>http://vivid.red/post/hugo-summary/</link>
+      <pubDate>Mon, 14 Aug 2017 18:31:38 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/hugo-summary/</guid>
+      <description>&lt;p&gt;ブログの記事リストでよくある「続きを読む」、「もっと読む」、「Read more」等に概要が書いてあって「&lt;code&gt;...&lt;/code&gt;」で続きがあるようになっているのを見たことがあります。これをHugoでどうやればよいかを調べました。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugoで404ページかどうかを判定する</title>
+      <link>http://vivid.red/post/hugo-how-to-check-404/</link>
+      <pubDate>Mon, 14 Aug 2017 18:04:22 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/hugo-how-to-check-404/</guid>
+      <description>&lt;p&gt;Google Adsenseでは、404ページに広告を載せてはいけないことになっています。うちのブログでもいずれやろうと思っているので対応しました。やり方を調べるのが大変だったのでここに記すことにしました。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ATmega328P-PUに内蔵8MHzスケッチを書き込む</title>
+      <link>http://vivid.red/post/write-internal-8mhz-sketch-atmega328/</link>
+      <pubDate>Fri, 11 Aug 2017 00:02:44 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/write-internal-8mhz-sketch-atmega328/</guid>
+      <description>&lt;p&gt;この記事は&lt;a href=&#34;http://vivid.red/post/burn-arduino-bootloader-atmega328&#34;&gt;ATmega328P-PUにArduinoのブートローダーを書き込む&lt;/a&gt;の続きです。&lt;/p&gt;
+
+&lt;p&gt;Arduino UNOを使ってATmega328P-PUに内蔵8MHzスケッチを書き込みました。手順を記録します。
+※ArduinoIDEは1.8.1を使用しています。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ATmega328P-PUにArduinoのブートローダーを書き込む</title>
+      <link>http://vivid.red/post/burn-arduino-bootloader-atmega328/</link>
+      <pubDate>Thu, 10 Aug 2017 23:46:49 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/burn-arduino-bootloader-atmega328/</guid>
+      <description>&lt;p&gt;Arduino UNOを使ってATmega328P-PUにブートローダーを書き込む手順を忘れないために記述しておきます。この記事を読んでいる方は何のためにブートローダーを書き込むのか分かっているかと思いますのでいきなり本題に入りたいと思います。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugoのローカルサーバー立ち上げがめんどくさかったのでserver.exeを作った</title>
+      <link>http://vivid.red/post/hugo-start-server/</link>
+      <pubDate>Sun, 06 Aug 2017 03:22:03 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/hugo-start-server/</guid>
+      <description>&lt;p&gt;Hugoのプレビューに使うサーバーを立ち上げるコマンドが長くて面倒だったのでダブルクリックで起動できる実行ファイルにしました。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugo記事管理のために名前をどうするか</title>
+      <link>http://vivid.red/post/think-naming-conventions/</link>
+      <pubDate>Sun, 06 Aug 2017 02:41:45 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/think-naming-conventions/</guid>
+      <description>&lt;p&gt;今ここで採用しようとしている記事ファイルの命名規則は&lt;del&gt;似非&lt;/del&gt;英語で内容を簡単に説明するような感じにしようと思っています。このやり方で行くとファイルの並べ方を更新日時順に表示すれば都合がよさそうです。ところが、後から内容を修正すると順番が入れ替わってしまいます。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>はじめまして、Hugo</title>
+      <link>http://vivid.red/post/hello-hugo/</link>
+      <pubDate>Fri, 04 Aug 2017 23:00:20 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/hello-hugo/</guid>
+      <description>&lt;p&gt;こんにちは！vivid.redの管理人のふぇぎです。昔から欲しかった独自ドメイン &lt;em&gt;vivid.red&lt;/em&gt; を買えたのでブログを作ることにしました。私の好きなアニメにちなんでいます。ここには昔のfc2ブログの記事を移転したり、おもろいなと思うこと、好きなことなどを載せたりしていきます。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>http://vivid.red/privacypolicy/</link>
+      <pubDate>Sat, 01 Jan 2000 00:00:00 +0900</pubDate>
+      
+      <guid>http://vivid.red/privacypolicy/</guid>
+      <description>当サイトに掲載されている広告について 当サイトでは、第三者配信の広告サービス（Googleアドセンス）を利用しています利用する予定です。
+このような広告配信事業者は、ユーザーの興味に応じた商品やサービスの広告を表示するため、当サイトや他サイトへのアクセスに関する情報 『Cookie』(氏名、住所、メール アドレス、電話番号は含まれません) を使用することがあります。
+またGoogleアドセンスに関して、このプロセスの詳細やこのような情報が広告配信事業者に使用されないようにする方法については、広告 – ポリシーと規約 – Googleをクリックしてください。
+当サイトが使用しているアクセス解析ツールについて 当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。
+このGoogleアナリティクスはトラフィックデータの収集のためにCookieを使用しています。このトラフィックデータは匿名で収集されており、個人を特定するものではありません。この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。
+この規約に関して、詳しくはTerms of Service | Google Analytics – Google、またはユーザーが Google パートナーのサイトやアプリを使用する際の Google によるデータ使用 – ポリシーと規約 – Googleをクリックしてください。
+当サイトへのコメントについて 当サイトでは、Disqusというサービスを利用しています。
+コメントは承認制となっており、不適切でないと判断した物のみ公開します。
+お問い合わせについて 当サイトでは、「Googleフォーム」を利用しています。
+お問い合わせ時に記入していただいた情報は、「Googleドライブ」の非公開フォルダに保存されます。
+個人情報について 保存された情報は、対応に必要な場合のみに利用します。また、法的な特例を除き第三者には公開しません。
+また、保存されている情報の修正・削除等には応じます。
+免責 当サイトの閲覧による不都合に対する責任を負いません。</description>
+    </item>
+    
+  </channel>
+</rss>

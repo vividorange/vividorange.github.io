@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.25.1" />
+    <link rel="shortcut icon" href="http://vivid.red/favicon.ico">
+    <link rel="apple-touch-icon" href="http://vivid.red/apple-touch-icon.png">
+    <link href="http://vivid.red/index.xml" rel="alternate" type="application/rss+xml" title="あざやかオレンジ" />
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+    
+    <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
+    <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <link rel="stylesheet" type="text/css" href="http://vivid.red/css/style.css">
+    <title>ATmega328P-PUにArduinoのブートローダーを書き込む | あざやかオレンジ</title>
+  </head>
+  <body>
+    <div id="wrap">
+      
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-104160300-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+      <header class="site-header">
+        <div class="site-header-left">
+          <a class="site-header-title" href="http://vivid.red/">あざやかオレンジ</a>
+  	      <nav>
+            <ul class="navs">
+  	          <li><a href="http://vivid.red/">Home</a></li>
+  	          <li><a href="http://vivid.red/privacypolicy/">Privacy Policy</a></li>
+  	          <li><a href="https://goo.gl/forms/wWDfKpozrO5IuL703">Contact</a></li>
+  	          <li class="mobile-only"><a href="#sidebar">Footer</a></li>
+  	        </ul>
+  		  </nav>
+        </div>
+      </header>
+      <div class="container">
+        <div id="main">
+
+<div class="article">
+  <header>
+    <div class="article-header">
+      <h1>ATmega328P-PUにArduinoのブートローダーを書き込む</h1>
+      <div class="article-meta">
+        <span class="posttime">2017/08/10</span>
+        
+<div class="tags">
+  <ul>
+    <li></li>
+    
+    <li>
+        <a href="http://vivid.red/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C">電子工作</a>
+    </li>
+    
+    <li>
+        <a href="http://vivid.red/tags/arduino">Arduino</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="content">
+      <p>Arduino UNOを使ってATmega328P-PUにブートローダーを書き込む手順を忘れないために記述しておきます。この記事を読んでいる方は何のためにブートローダーを書き込むのか分かっているかと思いますのでいきなり本題に入りたいと思います。
+</p>
+
+<p>※ArduinoIDEは1.6.3を使用しています。最新版をダウンロードしたらまた書きます。他のマイコンでも出来るのかもしれませんがATmega328P-PUしか持っていないので、手に入ったら試してみたいと思います。</p>
+
+<h2 id="配線する">配線する</h2>
+
+<p>下図のように配線します。クロックは必要ない場合もありますがつけておいて問題ないです。抵抗器やコンデンサなどは不要です。ちゃんと書き込めました。こちらでは未確認ですが、右側の電源もいらないかも？
+<img src="http://vivid.red/img/201612110040592c1.png" alt="bootloader writing" /></p>
+
+<h2 id="パソコン側の準備">パソコン側の準備</h2>
+
+<p>Arduino IDEで「スケッチの例」から「ArduinoISP」を開き、Arduinoに書き込みます。書き込めたらツールタブから書き込み装置を「Arduino as ISP」にして「ブートローダーを書き込む」を選択します。しばらく待って「ブートローダの書き込みが完了しました。」と表示されれば完了です。</p>
+
+<h2 id="おわりに">おわりに</h2>
+
+<p>つづきを書きました。<a href="http://vivid.red/post/write-internal-8mhz-sketch-atmega328">ATmega328P-PUに内蔵8MHzスケッチを書き込む</a></p>
+
+<h3 id="参考">参考</h3>
+
+<p><a href="http://blog-yama.a-quest.com/?eid=970164">簡単！ATmega328Pにブートローダを書きこむ(第2弾) | N.Yamazaki&rsquo;s blog</a></p>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="article-footer">
+      
+      
+<div id="share-buttons">
+  <ul>
+    
+    <li>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="vividorange_f">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </li>
+    
+    
+    
+    
+    
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/http://vivid.red/post/burn-arduino-bootloader-atmega328//" class="hatena-bookmark-button" data-hatena-bookmark-title="ATmega328P-PUにArduinoのブートローダーを書き込む" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    
+    
+    <li>
+      <div class="g-plusone" data-size="medium"></div>
+    </li>
+    
+    
+    
+  </ul>
+</div>
+
+
+      <div class="article-meta">
+        <span class="posttime">2017/08/10</span>
+        
+<div class="tags">
+  <ul>
+    <li></li>
+    
+    <li>
+        <a href="http://vivid.red/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C">電子工作</a>
+    </li>
+    
+    <li>
+        <a href="http://vivid.red/tags/arduino">Arduino</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+      </div>
+      <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "vivid-red" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      
+      <div id="pagenavigation-next-prev">
+        
+        <div id="pagenavigation-prev">
+          <span class="pagenav-label">Next</span>
+          <a href="http://vivid.red/post/write-internal-8mhz-sketch-atmega328/">ATmega328P-PUに内蔵8MHzスケッチを書き込む</a>
+        </div>
+        
+        
+        <div id="pagenavigation-next">
+          <span class="pagenav-label">Previous</span>
+          <a href="http://vivid.red/post/hugo-start-server/">Hugoのローカルサーバー立ち上げがめんどくさかったのでserver.exeを作った</a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </footer>
+  
+</div>
+        </div>
+        <div class="sidebar" id="sidebar">
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>Author</span>
+    </div>
+    <div id="author">
+      <span>私はふぇぎです</span>
+	  <p>あざやかオレンジ(vivid.red)やってます。もしvivid.orangeが使えるようになったらそっちを使いたいかも。ビビッドレッド・オペレーションに魂を奪われた→<a href="http://vivid.red/operation">vivid.red/operation<a></p>
+      <div>
+        
+        <a href="https://twitter.com/vividorange_f"><i style="color:#1da1f2;" class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+        
+        
+        
+        <a href="https://youtube.com/vividorangefegi"><i style="color:#ee181e;" class="fa fa-youtube-square fa-2x" aria-hidden="true"></i></a>
+        
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>Tag</span>
+    </div>
+    <div class="categories">
+      <ul>
+        
+        <li>
+          <a href="http://vivid.red/tags/arduino"><span></span>arduino (2)</a>
+        </li>
+        
+        <li>
+          <a href="http://vivid.red/tags/c&#43;&#43;"><span></span>c&#43;&#43; (1)</a>
+        </li>
+        
+        <li>
+          <a href="http://vivid.red/tags/c%E8%A8%80%E8%AA%9E"><span></span>c言語 (1)</a>
+        </li>
+        
+        <li>
+          <a href="http://vivid.red/tags/hugo"><span></span>hugo (3)</a>
+        </li>
+        
+        <li>
+          <a href="http://vivid.red/tags/%E3%83%96%E3%83%AD%E3%82%B0"><span></span>ブログ (3)</a>
+        </li>
+        
+        <li>
+          <a href="http://vivid.red/tags/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0"><span></span>プログラミング (1)</a>
+        </li>
+        
+        <li>
+          <a href="http://vivid.red/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C"><span></span>電子工作 (2)</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>RSS</span>
+    </div>
+    <div id="rss">
+      <a href="http://vivid.red/index.xml" type="application/rss+xml" target="_blank">
+        <i class="fa fa-rss-square fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>
+      </div>
+      <footer>
+        <div id="site-footer-wrap">
+          <div id="site-footer">
+            <span>Powered by <a href="https://gohugo.io/">Hugo</a>.</span>
+            <span>
+              
+              Copyright &copy; 2017, <a href="http://vivid.red/">あざやかオレンジ</a>
+              
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+

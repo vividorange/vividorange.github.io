@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>電子工作 on あざやかオレンジ</title>
+    <link>http://vivid.red/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/</link>
+    <description>Recent content in 電子工作 on あざやかオレンジ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Fri, 11 Aug 2017 00:02:44 +0900</lastBuildDate>
+    <atom:link href="/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ATmega328P-PUに内蔵8MHzスケッチを書き込む</title>
+      <link>http://vivid.red/post/write-internal-8mhz-sketch-atmega328/</link>
+      <pubDate>Fri, 11 Aug 2017 00:02:44 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/write-internal-8mhz-sketch-atmega328/</guid>
+      <description>&lt;p&gt;この記事は&lt;a href=&#34;http://vivid.red/post/burn-arduino-bootloader-atmega328&#34;&gt;ATmega328P-PUにArduinoのブートローダーを書き込む&lt;/a&gt;の続きです。&lt;/p&gt;
+
+&lt;p&gt;Arduino UNOを使ってATmega328P-PUに内蔵8MHzスケッチを書き込みました。手順を記録します。
+※ArduinoIDEは1.8.1を使用しています。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ATmega328P-PUにArduinoのブートローダーを書き込む</title>
+      <link>http://vivid.red/post/burn-arduino-bootloader-atmega328/</link>
+      <pubDate>Thu, 10 Aug 2017 23:46:49 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/burn-arduino-bootloader-atmega328/</guid>
+      <description>&lt;p&gt;Arduino UNOを使ってATmega328P-PUにブートローダーを書き込む手順を忘れないために記述しておきます。この記事を読んでいる方は何のためにブートローダーを書き込むのか分かっているかと思いますのでいきなり本題に入りたいと思います。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

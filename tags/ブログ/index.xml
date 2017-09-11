@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ブログ on あざやかオレンジ</title>
+    <link>http://vivid.red/tags/%E3%83%96%E3%83%AD%E3%82%B0/</link>
+    <description>Recent content in ブログ on あざやかオレンジ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Mon, 14 Aug 2017 20:00:48 +0900</lastBuildDate>
+    <atom:link href="/tags/%E3%83%96%E3%83%AD%E3%82%B0/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>タグとカテゴリーの使い分け？</title>
+      <link>http://vivid.red/post/blog-tag-category/</link>
+      <pubDate>Mon, 14 Aug 2017 20:00:48 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/blog-tag-category/</guid>
+      <description>タグとカテゴリーの使い分けについて悩んでいる。どちらかで良いという声がある。記事の少ない今のうちに決断したいところだ。どうすればいいかな？もし無くすならカテゴリーの方だな。</description>
+    </item>
+    
+    <item>
+      <title>Hugo記事管理のために名前をどうするか</title>
+      <link>http://vivid.red/post/think-naming-conventions/</link>
+      <pubDate>Sun, 06 Aug 2017 02:41:45 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/think-naming-conventions/</guid>
+      <description>&lt;p&gt;今ここで採用しようとしている記事ファイルの命名規則は&lt;del&gt;似非&lt;/del&gt;英語で内容を簡単に説明するような感じにしようと思っています。このやり方で行くとファイルの並べ方を更新日時順に表示すれば都合がよさそうです。ところが、後から内容を修正すると順番が入れ替わってしまいます。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>はじめまして、Hugo</title>
+      <link>http://vivid.red/post/hello-hugo/</link>
+      <pubDate>Fri, 04 Aug 2017 23:00:20 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/hello-hugo/</guid>
+      <description>&lt;p&gt;こんにちは！vivid.redの管理人のふぇぎです。昔から欲しかった独自ドメイン &lt;em&gt;vivid.red&lt;/em&gt; を買えたのでブログを作ることにしました。私の好きなアニメにちなんでいます。ここには昔のfc2ブログの記事を移転したり、おもろいなと思うこと、好きなことなどを載せたりしていきます。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
