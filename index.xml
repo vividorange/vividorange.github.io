@@ -6,8 +6,18 @@
     <description>Recent content in あざやかオレンジ on あざやかオレンジ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Mon, 14 Aug 2017 20:00:48 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 09 Oct 2017 07:01:45 +0900</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>iTunes 12.7 for Windows のインストールに失敗した話</title>
+      <link>http://vivid.red/post/itunes-update-failure/</link>
+      <pubDate>Mon, 09 Oct 2017 07:01:45 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/itunes-update-failure/</guid>
+      <description>&lt;p&gt;どうもひさしぶり。iTunesのアップデートができなくなっていたのでちょいと調べて解決した話を書きます。iPhoneをアップデートするために(古い)iTunesを起動してiPhoneを繋いでみたら認識されていませんでした。なので、めんどくさがって放置していたiTunesのバージョンアップをすることにしました。
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>タグとカテゴリーの使い分け？</title>

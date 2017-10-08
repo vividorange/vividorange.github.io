@@ -6,7 +6,7 @@
     <meta name="generator" content="Hugo 0.25.1" />
     <link rel="shortcut icon" href="http://vivid.red/favicon.ico">
     <link rel="apple-touch-icon" href="http://vivid.red/apple-touch-icon.png">
-    <link href="http://vivid.red/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/index.xml" rel="alternate" type="application/rss+xml" title="あざやかオレンジ" />
+    <link href="http://vivid.red/index.xml" rel="alternate" type="application/rss+xml" title="あざやかオレンジ" />
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     
@@ -17,7 +17,7 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
     <link rel="stylesheet" type="text/css" href="http://vivid.red/css/style.css">
-    <title>電子工作 | あざやかオレンジ</title>
+    <title>iTunes 12.7 for Windows のインストールに失敗した話 | あざやかオレンジ</title>
   </head>
   <body>
   
@@ -48,90 +48,130 @@ ga('send', 'pageview');
       <div class="container">
         <div id="main">
 
-<div id="article-list">
-  
-  <div id="articles-list-header">
-    <h1><span id="archive-value">電子工作</span></h1>
-  </div>
-  
-  
-  
-  <div class="article">
-    <h2><a href="http://vivid.red/post/write-internal-8mhz-sketch-atmega328/">ATmega328P-PUに内蔵8MHzスケッチを書き込む</a></h2>
-	<div class="summary">
-	
-	  <p>この記事は<a href="http://vivid.red/post/burn-arduino-bootloader-atmega328">ATmega328P-PUにArduinoのブートローダーを書き込む</a>の続きです。</p>
-
-<p>Arduino UNOを使ってATmega328P-PUに内蔵8MHzスケッチを書き込みました。手順を記録します。
-※ArduinoIDEは1.8.1を使用しています。
-</p>
-	
-	</div>
-	<div class="read-more">
-	  <a href="http://vivid.red/post/write-internal-8mhz-sketch-atmega328/">続きを読む</a>
-	</div>
-    <div class="article-meta">
-      <span class="posttime">2017/08/11</span>
-      
+<div class="article">
+  <header>
+    <div class="article-header">
+      <h1>iTunes 12.7 for Windows のインストールに失敗した話</h1>
+      <div class="article-meta">
+        <span class="posttime">2017/10/09</span>
+        
 <div class="tags">
   <ul>
     <li></li>
     
     <li>
-        <a href="http://vivid.red/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C">電子工作</a>
-    </li>
-    
-    <li>
-        <a href="http://vivid.red/tags/arduino">Arduino</a>
+        <a href="http://vivid.red/tags/%E6%97%A5%E8%A8%98">日記</a>
     </li>
     
   </ul>
 </div>
 
 
+      </div>
     </div>
-  </div>
-  
-  <div class="article">
-    <h2><a href="http://vivid.red/post/burn-arduino-bootloader-atmega328/">ATmega328P-PUにArduinoのブートローダーを書き込む</a></h2>
-	<div class="summary">
-	
-	  <p>Arduino UNOを使ってATmega328P-PUにブートローダーを書き込む手順を忘れないために記述しておきます。この記事を読んでいる方は何のためにブートローダーを書き込むのか分かっているかと思いますのでいきなり本題に入りたいと思います。
+  </header>
+  <main>
+    <div class="content">
+      <p>どうもひさしぶり。iTunesのアップデートができなくなっていたのでちょいと調べて解決した話を書きます。iPhoneをアップデートするために(古い)iTunesを起動してiPhoneを繋いでみたら認識されていませんでした。なので、めんどくさがって放置していたiTunesのバージョンアップをすることにしました。
 </p>
-	
-	</div>
-	<div class="read-more">
-	  <a href="http://vivid.red/post/burn-arduino-bootloader-atmega328/">続きを読む</a>
-	</div>
-    <div class="article-meta">
-      <span class="posttime">2017/08/10</span>
+
+<h2 id="問題発生">問題発生</h2>
+
+<p>公式サイトからインストーラーをダウンロードして実行したら <code>このWindowsインストーラパッケージには問題があります。このインストールを完了するのに必要なプログラムを実行できませんでした。サポート担当者またはパッケージのベンダに問い合せて下さい。</code>と表示されてアップデートに失敗してしまいました。3回やり直してみてダメだったので、このメッセージを検索してみました。</p>
+
+<h2 id="解決">解決</h2>
+
+<p>公式にありました。<a href="https://discussionsjapan.apple.com/thread/10098506?tstart=0">iTunesのインストールができません |
+公式 Apple サポートコミュニティ</a></p>
+
+<p>ここにApple Software Updateを修復するように回答されていたので、パソコンの設定から修復を行い、もう一度iTunesのアップデートをやってみたら成功しました。</p>
+
+<p>これから僕もiPhoneの画面を録画してTwitterにアップできるで^^<br />
+画面端押し込みできなくなってるやんけ</p>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="article-footer">
       
+      
+<div id="share-buttons">
+  <ul>
+    
+    <li>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="vividorange_f">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </li>
+    
+    
+    
+    
+    
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/http://vivid.red/post/itunes-update-failure//" class="hatena-bookmark-button" data-hatena-bookmark-title="iTunes 12.7 for Windows のインストールに失敗した話" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    
+    
+    <li>
+      <div class="g-plusone" data-size="medium"></div>
+    </li>
+    
+    
+    
+  </ul>
+</div>
+
+
+      <div class="article-meta">
+        <span class="posttime">2017/10/09</span>
+        
 <div class="tags">
   <ul>
     <li></li>
     
     <li>
-        <a href="http://vivid.red/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C">電子工作</a>
-    </li>
-    
-    <li>
-        <a href="http://vivid.red/tags/arduino">Arduino</a>
+        <a href="http://vivid.red/tags/%E6%97%A5%E8%A8%98">日記</a>
     </li>
     
   </ul>
 </div>
 
 
-    </div>
-  </div>
-  
-  <nav>
-    <div id="pager">
-      
-      
+      </div>
+      <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "vivid-red" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+      
+      <div id="pagenavigation-next-prev">
+        
+        
+        <div id="pagenavigation-next">
+          <span class="pagenav-label">Previous</span>
+          <a href="http://vivid.red/post/blog-tag-category/">タグとカテゴリーの使い分け？</a>
+        </div>
+        
+      </div>
+      
     </div>
-  </nav>
+  </footer>
+  
 </div>
         </div>
         <div class="sidebar" id="sidebar">
@@ -155,6 +195,8 @@ ga('send', 'pageview');
       </div>
     </div>
   </div>
+  
+  
   
   
   
@@ -206,7 +248,7 @@ ga('send', 'pageview');
       <span>RSS</span>
     </div>
     <div id="rss">
-      <a href="http://vivid.red/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/index.xml" type="application/rss+xml" target="_blank">
+      <a href="http://vivid.red/index.xml" type="application/rss+xml" target="_blank">
         <i class="fa fa-rss-square fa-2x" aria-hidden="true"></i>
       </a>
     </div>

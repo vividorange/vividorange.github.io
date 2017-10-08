@@ -1,8 +1,4 @@
 $(function(){	
-	
-	
-	
-	
 	function makeBgCircle(className, place){
 		// 画面の幅に0.0~1.0を掛けることによって、左からの座標を計算する
 		var leftPx = parseInt(Math.random() * $(window).width());
@@ -58,7 +54,7 @@ $(function(){
 		// divにcssを付けて追加する
 		$('<div class="bg-circle ' + className + ' ' + circleWidth + ' ' + circleColor + '"><\/div>').css({'left': leftPx, 'bottom' : bottomPx}).appendTo(place);
 	}
-	
+	$('body').prepend('<div id="bg-wrapper"><div id="move-bg01"></div><div id="move-bg02"></div></div>');
 	//ページ表示時の背景生成
 	for (var i = 0; i < 30; i++){
 		makeBgCircle('circle01', '#move-bg01');
