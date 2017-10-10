@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     
     <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     
     <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
     <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
@@ -40,7 +42,7 @@ ga('send', 'pageview');
   	          <li><a href="http://vivid.red/">Home</a></li>
   	          <li><a href="http://vivid.red/privacypolicy/">Privacy Policy</a></li>
   	          <li><a href="https://goo.gl/forms/wWDfKpozrO5IuL703">Contact</a></li>
-  	          <li class="mobile-only"><a href="#sidebar">Footer</a></li>
+  	          <li class="mobile-only"><a href="javascript:void(0);" onclick="$('html,body').animate({scrollTop:$('#sidebar').offset().top},'swing');">Footer</a></li>
   	        </ul>
   		  </nav>
         </div>
