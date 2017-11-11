@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://vivid.red/post/slack-api-chat-postmessage/</loc>
+    <lastmod>2017-11-11T14:28:04+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://vivid.red/post/itunes-update-failure/</loc>
     <lastmod>2017-10-09T07:01:45+09:00</lastmod>
   </url>
@@ -83,7 +88,13 @@
   
   <url>
     <loc>http://vivid.red/post/</loc>
-    <lastmod>2017-10-09T07:01:45+09:00</lastmod>
+    <lastmod>2017-11-11T14:28:04+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vivid.red/tags/slack-api/</loc>
+    <lastmod>2017-11-11T14:28:04+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -95,7 +106,7 @@
   
   <url>
     <loc>http://vivid.red/</loc>
-    <lastmod>2017-10-09T07:01:45+09:00</lastmod>
+    <lastmod>2017-11-11T14:28:04+09:00</lastmod>
     <priority>0</priority>
   </url>
   

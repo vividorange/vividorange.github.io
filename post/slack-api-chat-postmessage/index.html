@@ -19,7 +19,7 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
     <link rel="stylesheet" type="text/css" href="http://vivid.red/css/style.css">
-    <title>ATmega328P-PUにArduinoのブートローダーを書き込む | あざやかオレンジ</title>
+    <title>Slack APIでメッセージを投稿する | あざやかオレンジ</title>
   </head>
   <body>
   
@@ -53,20 +53,16 @@ ga('send', 'pageview');
 <div class="article">
   <header>
     <div class="article-header">
-      <h1>ATmega328P-PUにArduinoのブートローダーを書き込む</h1>
+      <h1>Slack APIでメッセージを投稿する</h1>
       <div class="article-meta">
-        <span class="posttime">2017/08/10</span>
+        <span class="posttime">2017/11/11</span>
         
 <div class="tags">
   <ul>
     <li></li>
     
     <li>
-        <a href="http://vivid.red/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C">電子工作</a>
-    </li>
-    
-    <li>
-        <a href="http://vivid.red/tags/arduino">Arduino</a>
+        <a href="http://vivid.red/tags/slack-api">Slack API</a>
     </li>
     
   </ul>
@@ -78,27 +74,32 @@ ga('send', 'pageview');
   </header>
   <main>
     <div class="content">
-      <p>Arduino UNOを使ってATmega328P-PUにブートローダーを書き込む手順を忘れないために記述しておきます。この記事を読んでいる方は何のためにブートローダーを書き込むのか分かっているかと思いますのでいきなり本題に入りたいと思います。
+      <p>Slack API のトークンを取得して、チャンネル(または個人宛て)にメッセージを送るところまでやります。
 </p>
 
-<p>※ArduinoIDEは1.6.3を使用しています。最新版をダウンロードしたらまた書きます。他のマイコンでも出来るのかもしれませんがATmega328P-PUしか持っていないので、手に入ったら試してみたいと思います。</p>
+<h2 id="トークンを取得する">トークンを取得する</h2>
 
-<h2 id="配線する">配線する</h2>
+<p>Slack APIを使うにはトークンを取得する必要があります。<a href="https://api.slack.com/custom-integrations/legacy-tokens">Legact tokens | Slack</a>にアクセスして、 <strong><em>Legacy token generator</em></strong> の <strong><em>Create token</em></strong> をクリックするとトークンを作ることができます。これを他人に渡してはいけません。</p>
 
-<p>下図のように配線します。クロックは必要ない場合もありますがつけておいて問題ないです。抵抗器やコンデンサなどは不要です。ちゃんと書き込めました。こちらでは未確認ですが、右側の電源もいらないかも？
-<img src="http://vivid.red/img/201612110040592c1.png" alt="bootloader writing" /></p>
+<h2 id="apiのクエリーを作る">APIのクエリーを作る</h2>
 
-<h2 id="パソコン側の準備">パソコン側の準備</h2>
+<p><a href="https://api.slack.com/methods/chat.postMessage">chat.postMessage method | Slack</a>を使います。必須項目は<code>token</code>、<code>channel</code>、<code>text</code>ですが、送信するユーザー名を変えたかったので<code>as_user</code>と<code>username</code>も使用しました。</p>
 
-<p>Arduino IDEで「スケッチの例」から「ArduinoISP」を開き、Arduinoに書き込みます。書き込めたらツールタブから書き込み装置を「Arduino as ISP」にして「ブートローダーを書き込む」を選択します。しばらく待って「ブートローダの書き込みが完了しました。」と表示されれば完了です。</p>
+<p><code>token</code>には先ほど取得したものを、<code>channel</code>には<code>#random</code>や<code>@user</code>のように送信したい相手を、<code>text</code>には「やあ」とかメッセージを入れます。<code>as_user</code>を<code>false</code>にして<code>username</code>に適当な名前を入れると送信者名をその名前として送信できます。</p>
 
-<h2 id="おわりに">おわりに</h2>
+<p>これをクエリーパラメーターとして次のように書きます。<br />
+<code>token=xxxx-xxxxxxxxxx&amp;channel=#random&amp;text=ほげほげ&amp;as_user=false&amp;username=ホゲホゲマン</code></p>
 
-<p>つづきを書きました。<a href="http://vivid.red/post/write-internal-8mhz-sketch-atmega328">ATmega328P-PUに内蔵8MHzスケッチを書き込む</a></p>
+<h3 id="そして多くの場合-その結末は">そして多くの場合、その結末は―――</h3>
 
-<h3 id="参考">参考</h3>
+<p>エラーになります。<strong>#</strong>やtext中の<strong>&amp;</strong>などのクエリーに使えない文字が入っているのでエンコードする必要があります。ブラウザでF12を押してConsoleから<code>encodeURIComponent(&quot;#random&quot;)</code>などと実行すると<code>%23random</code>が得られるので、該当するすべてについて(よくわからないなら全部で)実行します。日本語などはChromeだと大丈夫でしたが他の環境については知らないです。</p>
 
-<p><a href="http://blog-yama.a-quest.com/?eid=970164">簡単！ATmega328Pにブートローダを書きこむ(第2弾) | N.Yamazaki&rsquo;s blog</a></p>
+<h2 id="メッセージを送信する">メッセージを送信する</h2>
+
+<p>作ったクエリーをAPIのURLにくっつけてアクセスします。
+<code>https://slack.com/api/chat.postMessage?token=xxxx-xxxxxxxxxx&amp;channel=%23random&amp;text=ほげほげ&amp;as_user=false&amp;username=ホゲホゲマン</code></p>
+
+<p>これにブラウザでアクセスするとSlackに送信されます。</p>
     </div>
   </main>
   
@@ -119,7 +120,7 @@ ga('send', 'pageview');
     
     
     <li>
-      <a href="http://b.hatena.ne.jp/entry/http://vivid.red/post/burn-arduino-bootloader-atmega328//" class="hatena-bookmark-button" data-hatena-bookmark-title="ATmega328P-PUにArduinoのブートローダーを書き込む" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+      <a href="http://b.hatena.ne.jp/entry/http://vivid.red/post/slack-api-chat-postmessage//" class="hatena-bookmark-button" data-hatena-bookmark-title="Slack APIでメッセージを投稿する" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
     </li>
     
     
@@ -134,18 +135,14 @@ ga('send', 'pageview');
 
 
       <div class="article-meta">
-        <span class="posttime">2017/08/10</span>
+        <span class="posttime">2017/11/11</span>
         
 <div class="tags">
   <ul>
     <li></li>
     
     <li>
-        <a href="http://vivid.red/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C">電子工作</a>
-    </li>
-    
-    <li>
-        <a href="http://vivid.red/tags/arduino">Arduino</a>
+        <a href="http://vivid.red/tags/slack-api">Slack API</a>
     </li>
     
   </ul>
@@ -176,15 +173,10 @@ ga('send', 'pageview');
       
       <div id="pagenavigation-next-prev">
         
-        <div id="pagenavigation-prev">
-          <span class="pagenav-label">Next</span>
-          <a href="http://vivid.red/post/write-internal-8mhz-sketch-atmega328/">ATmega328P-PUに内蔵8MHzスケッチを書き込む</a>
-        </div>
-        
         
         <div id="pagenavigation-next">
           <span class="pagenav-label">Previous</span>
-          <a href="http://vivid.red/post/hugo-start-server/">Hugoのローカルサーバー立ち上げがめんどくさかったのでserver.exeを作った</a>
+          <a href="http://vivid.red/post/itunes-update-failure/">iTunes 12.7 for Windows のインストールに失敗した話</a>
         </div>
         
       </div>
