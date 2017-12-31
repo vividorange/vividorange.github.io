@@ -6,8 +6,18 @@
     <description>Recent content in Arduino on あざやかオレンジ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Fri, 11 Aug 2017 00:02:44 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 31 Dec 2017 17:08:43 +0900</lastBuildDate>
     <atom:link href="/tags/arduino/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Arduino UNOを使ってESP-WROOM-02にプログラムを書き込む</title>
+      <link>http://vivid.red/post/write-esp8266-using-arduino-uno/</link>
+      <pubDate>Sun, 31 Dec 2017 17:08:43 +0900</pubDate>
+      
+      <guid>http://vivid.red/post/write-esp8266-using-arduino-uno/</guid>
+      <description>&lt;p&gt;Arduino IDEを使ってESP-WROOM-02にプログラムを書き込んだり通信したりする場合に、多くの文献ではUSBシリアル変換器を使うようになっています。しかし、Arduinoをすでに持っている場合はその必要がありません。一部のArduinoにはUSBシリアル変換器の役割をするチップが備わっているので、それを利用できます。
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>ATmega328P-PUに内蔵8MHzスケッチを書き込む</title>

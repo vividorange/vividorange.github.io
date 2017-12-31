@@ -24,7 +24,7 @@
     
 	
     <link rel="stylesheet" type="text/css" href="http://vivid.red/css/style.css">
-    <title>ATmega328P-PUにArduinoのブートローダーを書き込む | あざやかオレンジ </title>
+    <title>Arduino UNOを使ってESP-WROOM-02にプログラムを書き込む | あざやかオレンジ </title>
   </head>
   <body>
   
@@ -58,16 +58,16 @@ ga('send', 'pageview');
 <div class="article">
   <header>
     <div class="article-header">
-      <h1>ATmega328P-PUにArduinoのブートローダーを書き込む</h1>
+      <h1>Arduino UNOを使ってESP-WROOM-02にプログラムを書き込む</h1>
       <div class="article-meta">
-        <span class="posttime">2017/08/10</span>
+        <span class="posttime">2017/12/31</span>
         
 <div class="tags">
   <ul>
     <li></li>
     
     <li>
-        <a href="http://vivid.red/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C">電子工作</a>
+        <a href="http://vivid.red/tags/esp-wroom-02">ESP-WROOM-02</a>
     </li>
     
     <li>
@@ -83,27 +83,99 @@ ga('send', 'pageview');
   </header>
   <main>
     <div class="content">
-      <p>Arduino UNOを使ってATmega328P-PUにブートローダーを書き込む手順を忘れないために記述しておきます。この記事を読んでいる方は何のためにブートローダーを書き込むのか分かっているかと思いますのでいきなり本題に入りたいと思います。
+      <p>Arduino IDEを使ってESP-WROOM-02にプログラムを書き込んだり通信したりする場合に、多くの文献ではUSBシリアル変換器を使うようになっています。しかし、Arduinoをすでに持っている場合はその必要がありません。一部のArduinoにはUSBシリアル変換器の役割をするチップが備わっているので、それを利用できます。
 </p>
 
-<p>※ArduinoIDEは1.6.3を使用しています。最新版をダウンロードしたらまた書きます。他のマイコンでも出来るのかもしれませんがATmega328P-PUしか持っていないので、手に入ったら試してみたいと思います。</p>
+<h2 id="接続方法">接続方法</h2>
 
-<h2 id="配線する">配線する</h2>
+<p>Arduino UNOを使った場合について書きます。基本的な回路構成については他者に譲る(書くかも)として、シリアル通信をするための回路部分について書きます。<br />
+UNOでも基板が違ったりしてうまくいかない場合もあるみたいです。私は<a href="http://amzn.asia/hJISFzg">Arduino エントリーキット(Uno版）- Physical Computing Lab</a>を使用しました。</p>
 
-<p>下図のように配線します。クロックは必要ない場合もありますがつけておいて問題ないです。抵抗器やコンデンサなどは不要です。ちゃんと書き込めました。こちらでは未確認ですが、右側の電源もいらないかも？
-<img src="http://vivid.red/img/201612110040592c1.png" alt="bootloader writing" /></p>
+<p>当然Arduinoからの給電では動かせないので、ESP-WROOM-02用の別電源を用意してください。</p>
 
-<h2 id="パソコン側の準備">パソコン側の準備</h2>
+<h3 id="ピンアサイン">ピンアサイン</h3>
 
-<p>Arduino IDEで「スケッチの例」から「ArduinoISP」を開き、Arduinoに書き込みます。書き込めたらツールタブから書き込み装置を「Arduino as ISP」にして「ブートローダーを書き込む」を選択します。しばらく待って「ブートローダの書き込みが完了しました。」と表示されれば完了です。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Arduino</th>
+<th align="center"><code>---</code></th>
+<th align="center">ESP</th>
+<th align="center">備考</th>
+</tr>
+</thead>
 
-<h2 id="おわりに">おわりに</h2>
+<tbody>
+<tr>
+<td align="center">RX←0</td>
+<td align="center"><code>--&gt;</code></td>
+<td align="center">RXD</td>
+<td align="center">3.3Vを超えぬこと</td>
+</tr>
 
-<p>つづきを書きました。<a href="http://vivid.red/post/write-internal-8mhz-sketch-atmega328">ATmega328P-PUに内蔵8MHzスケッチを書き込む</a></p>
+<tr>
+<td align="center">TX→1</td>
+<td align="center"><code>&lt;--</code></td>
+<td align="center">TXD</td>
+<td align="center"></td>
+</tr>
 
-<h3 id="参考">参考</h3>
+<tr>
+<td align="center">GND</td>
+<td align="center"><code>---</code></td>
+<td align="center">GND</td>
+<td align="center"></td>
+</tr>
 
-<p><a href="http://blog-yama.a-quest.com/?eid=970164">簡単！ATmega328Pにブートローダを書きこむ(第2弾) | N.Yamazaki&rsquo;s blog</a></p>
+<tr>
+<td align="center">RESET</td>
+<td align="center"><code>---</code></td>
+<td align="center">GND</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="arduino-ideの設定">Arduino IDEの設定</h2>
+
+<p>前提として、なるべく新しいArduino.ccからダウンロードしたものを使用してください(1.8.5使用)。</p>
+
+<ul>
+<li>環境設定を開いて、追加のボードマネージャのURLに<code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code>をペーストする</li>
+<li>ツール -&gt; ボード -&gt; ボードマネージャを開く</li>
+<li>ESP8266で検索してインストールする</li>
+<li>ボードを設定する
+
+<ul>
+<li>Generic ESP8266 Module</li>
+<li>あとは特にいじらなくても大丈夫</li>
+</ul></li>
+</ul>
+
+<p>確認のために書き込む前にシリアルモニタをCRLF/115200 baudに設定して<code>AT+CIFSR</code>を送信してみてください。</p>
+
+<h2 id="lチカを書き込む">Lチカを書き込む</h2>
+
+<p>IO12にLEDを繋ぎ、以下のプログラムを書き込みます。</p>
+
+<pre><code class="language-c">void setup() {
+  // put your setup code here, to run once:
+  analogWriteRange(10);
+  analogWriteFreq(10);
+  analogWrite(12,1);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+}
+</code></pre>
+
+<p>ESP-WROOM-02のお作法に従って、矢印ボタンをクリック♪<br />
+オレンジ色の点々が表示されてしばらくすると点滅し始めます。</p>
+
+<h2 id="uartなのになぜrx同士-tx同士を繋ぐのかという話">UARTなのになぜRX同士・TX同士を繋ぐのかという話</h2>
+
+<p>UARTはRXはTXに、TXはRXにつなぐんじゃないのかと思ったあなた！そうなんです！！実はちゃんとそうなっているんです！！！というのも、Arduinoの基板に書いてあるRX/TXはArduinoから見たものです。一方今回のはATMEGA16U2から見たRX/TXに繋いでいます。</p>
     </div>
   </main>
   
@@ -124,7 +196,7 @@ ga('send', 'pageview');
     
     
     <li>
-      <a href="http://b.hatena.ne.jp/entry/http://vivid.red/post/burn-arduino-bootloader-atmega328//" class="hatena-bookmark-button" data-hatena-bookmark-title="ATmega328P-PUにArduinoのブートローダーを書き込む" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+      <a href="http://b.hatena.ne.jp/entry/http://vivid.red/post/write-esp8266-using-arduino-uno//" class="hatena-bookmark-button" data-hatena-bookmark-title="Arduino UNOを使ってESP-WROOM-02にプログラムを書き込む" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
     </li>
     
     
@@ -139,14 +211,14 @@ ga('send', 'pageview');
 
 
       <div class="article-meta">
-        <span class="posttime">2017/08/10</span>
+        <span class="posttime">2017/12/31</span>
         
 <div class="tags">
   <ul>
     <li></li>
     
     <li>
-        <a href="http://vivid.red/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C">電子工作</a>
+        <a href="http://vivid.red/tags/esp-wroom-02">ESP-WROOM-02</a>
     </li>
     
     <li>
@@ -181,15 +253,10 @@ ga('send', 'pageview');
       
       <div id="pagenavigation-next-prev">
         
-        <div id="pagenavigation-prev">
-          <span class="pagenav-label">Next</span>
-          <a href="http://vivid.red/post/write-internal-8mhz-sketch-atmega328/">ATmega328P-PUに内蔵8MHzスケッチを書き込む</a>
-        </div>
-        
         
         <div id="pagenavigation-next">
           <span class="pagenav-label">Previous</span>
-          <a href="http://vivid.red/post/hugo-start-server/">Hugoのローカルサーバー立ち上げがめんどくさかったのでserver.exeを作った</a>
+          <a href="http://vivid.red/post/slack-api-chat-postmessage/">Slack APIでメッセージを投稿する</a>
         </div>
         
       </div>

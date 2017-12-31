@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://vivid.red/post/write-esp8266-using-arduino-uno/</loc>
+    <lastmod>2017-12-31T17:08:43+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://vivid.red/post/slack-api-chat-postmessage/</loc>
     <lastmod>2017-11-11T14:28:04+09:00</lastmod>
   </url>
@@ -59,7 +64,7 @@
   
   <url>
     <loc>http://vivid.red/tags/arduino/</loc>
-    <lastmod>2017-08-11T00:02:44+09:00</lastmod>
+    <lastmod>2017-12-31T17:08:43+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -81,6 +86,12 @@
   </url>
   
   <url>
+    <loc>http://vivid.red/tags/esp-wroom-02/</loc>
+    <lastmod>2017-12-31T17:08:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vivid.red/tags/hugo/</loc>
     <lastmod>2017-08-14T18:31:38+09:00</lastmod>
     <priority>0</priority>
@@ -88,7 +99,7 @@
   
   <url>
     <loc>http://vivid.red/post/</loc>
-    <lastmod>2017-11-11T14:28:04+09:00</lastmod>
+    <lastmod>2017-12-31T17:08:43+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -100,13 +111,13 @@
   
   <url>
     <loc>http://vivid.red/tags/</loc>
-    <lastmod>2017-08-11T00:02:44+09:00</lastmod>
+    <lastmod>2017-12-31T17:08:43+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://vivid.red/</loc>
-    <lastmod>2017-11-11T14:28:04+09:00</lastmod>
+    <lastmod>2017-12-31T17:08:43+09:00</lastmod>
     <priority>0</priority>
   </url>
   
